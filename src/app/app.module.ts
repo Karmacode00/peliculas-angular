@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-// import { HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,6 +14,7 @@ import { OptionsComponent } from './options/options.component';
 import { OneHourComponent } from './one-hour/one-hour.component';
 import { TwoHourComponent } from './two-hour/two-hour.component';
 import { MoreTimeComponent } from './more-time/more-time.component';
+import { OmdbServiceClient } from './services/omdb.service.client';
 
 @NgModule({
   declarations: [
@@ -27,13 +28,15 @@ import { MoreTimeComponent } from './more-time/more-time.component';
     OneHourComponent,
     TwoHourComponent,
     MoreTimeComponent,
-    // HttpModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [AppComponent],
+  providers: [
+    AppComponent,
+    OmdbServiceClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

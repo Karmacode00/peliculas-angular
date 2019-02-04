@@ -70,7 +70,7 @@ p{
     transition-timing-function: linear;
     transition-delay: 0.2s;
 }
-.conatiner-img img{
+.container-img img{
 	display:block;
 	margin:  150px auto 0px auto;
 	max-width: 200px;

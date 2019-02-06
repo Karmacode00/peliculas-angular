@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OmdbServiceClient } from '../services/omdb.service.client';
+import { Http, Response } from '@angular/http';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-half-hour',
@@ -18,10 +20,20 @@ export class HalfHourComponent implements OnInit {
       this.result = result;
       console.log(result);
     });*/
-  constructor(/*private omdbService: OmdbServiceClient*/) {
-    console.log(this.randomItem);
+  constructor(private http: Http) {
+    // console.log(this.randomItem);
+    this.searchData();
   }
-
+  // id = this.randomItem;
+  searchData() {
+    this.http.get('https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?i=tt' + this.randomItem + '&apikey=a963a012')
+    .pipe(map(
+      (res: Response) => {
+        const result = res.json();
+        console.log(result);
+      }
+    ));
+    }
   ngOnInit() {
   }
 

@@ -31,11 +31,14 @@ import { OmdbServiceClient } from './services/omdb.service.client';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [
     AppComponent,
-    OmdbServiceClient
+    OmdbServiceClient,
+    OptionsComponent,
+    HalfHourComponent
   ],
   bootstrap: [AppComponent]
 })

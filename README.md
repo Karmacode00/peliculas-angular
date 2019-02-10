@@ -1,6 +1,6 @@
 # Peliculas Angular
 
-Puedes ver el deploy aquí: [MovieTime en Angular](https://github.com/angular/angular-cli).
+Puedes ver el deploy aquí: [MovieTime en Angular](https://karmacode00.github.io/peliculas-angular/).
 
 ## Versiones
 

@@ -9,6 +9,7 @@ En esta primera versión puedes encontrar las mismas funcionalidades que en el p
 Para una próxima versión:
 Angular 7.
 Correcto desarrollo de Service para consultas a Api.
+Mejoras en interfaz gráfica.
 
 ## Desarrollo
 
